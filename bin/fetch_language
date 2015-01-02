@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require_relative "../lib/language_fetcher"
+
+if ARGV.empty?
+  puts "Please supply a github username"
+else
+  fetcher = LanguageFetcher.new
+  puts fetcher.get_favourite_language_for ARGV[0]
+end
